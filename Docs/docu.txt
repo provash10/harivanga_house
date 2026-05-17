@@ -1,0 +1,93 @@
+https://chatgpt.com/c/6a0738c7-0980-8323-928d-44e934fd5d8d
+
+Main Color Palette
+Primary Green: #3A5F0B
+Deep Green: #1E3A08
+Mango Yellow: #FFC107
+Light Yellow: #FFE082
+Cream Background: #FFF8E8
+White: #FFFFFF
+Text Dark: #1A1A1A
+Text Gray: #6B7280
+Border Color: #E5E7EB
+Card Background: #FAFAFA
+Hover Green: #4D7C0F
+Button Shadow: #2F4F0A
+Tailwind Config Example
+// tailwind.config.js
+
+theme: {
+  extend: {
+    colors: {
+      primary: "#3A5F0B",
+      deepGreen: "#1E3A08",
+      mango: "#FFC107",
+      lightYellow: "#FFE082",
+      cream: "#FFF8E8",
+      darkText: "#1A1A1A",
+      grayText: "#6B7280",
+      borderColor: "#E5E7EB",
+      cardBg: "#FAFAFA",
+      hoverGreen: "#4D7C0F",
+    },
+  },
+},
+Front Page Design Colors
+Navbar
+background: #FFFFFF
+text: #1A1A1A
+hover: #3A5F0B
+Hero Section
+background: linear-gradient(to right, #FFF8E8, #FFE082)
+button: #3A5F0B
+button-hover: #4D7C0F
+Product Card
+card-bg: #FFFFFF
+border: #E5E7EB
+price-color: #3A5F0B
+button-bg: #3A5F0B
+button-text: #FFFFFF
+Details Page Colors
+Add To Cart Button
+background: #3A5F0B
+color: #FFFFFF
+hover: #4D7C0F
+Buy Now Button
+background: #FFC107
+color: #1A1A1A
+Rating Star
+color: #FFC107
+Recommended Fonts
+Heading Font: Poppins
+Body Font: Inter
+Install Fonts
+npm install @fontsource/poppins @fontsource/inter
+Recommended Tailwind Classes
+Main Container
+className="max-w-7xl mx-auto px-4"
+Button
+className="bg-primary hover:bg-hoverGreen text-white px-6 py-3 rounded-lg transition"
+Product Card
+className="bg-white rounded-2xl shadow-md border border-borderColor p-4"
+Folder Structure
+app/
+ ├─ page.tsx
+ ├─ shop/
+ │   ├─ page.tsx
+ │   └─ [slug]/
+ │       └─ page.tsx
+ ├─ components/
+ │   ├─ Navbar.tsx
+ │   ├─ Hero.tsx
+ │   ├─ ProductCard.tsx
+ │   ├─ Footer.tsx
+ │   └─ Button.tsx
+ └─ lib/
+     └─ data.ts
+Image Sizes
+Banner
+1920 x 800
+Product Card
+600 x 600
+Details Page Main Image
+1000 x 1000
