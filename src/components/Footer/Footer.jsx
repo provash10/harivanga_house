@@ -5,6 +5,7 @@ import {
   FaTwitter,
   FaYoutube,
 } from 'react-icons/fa';
+import { IoLogoApple } from 'react-icons/io5';
 
 const Footer = () => {
   return (
@@ -13,9 +14,7 @@ const Footer = () => {
 
         {/* Column 1 */}
         <div>
-          <h1 className="text-2xl font-bold text-yellow-500 mb-4">
-            Harivanga House
-          </h1>
+           <h1 className='flex items-center text-2xl text-[#FFFFFF] font-bold'><IoLogoApple size={60} /> Harivanga House</h1>
 
           <p className="text-gray-300 leading-7">
             Fresh and premium quality Harivanga mangoes delivered

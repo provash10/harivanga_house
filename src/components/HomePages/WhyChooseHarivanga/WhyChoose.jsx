@@ -43,7 +43,7 @@ const WhyChoose = () => {
 
                     <Link
                         href="/about"
-                        className="block bg-green-950 text-white text-2xl font-bold px-4 py-2 rounded-2xl mt-4 w-fit"
+                        className="btn block text-white text-2xl font-bold px-4 py-1 rounded-md mt-4 w-fit"
                     >
                         About Us
                     </Link>
