@@ -50,7 +50,7 @@ const reviews = [
 
 const CustomerReviews = () => {
   return (
-    <div className="py-12 bg-green-50 overflow-hidden">
+    <div className="py-2 px-5 md:px-10 bg-green-50 overflow-hidden">
       <h2 className="text-3xl font-bold text-center mb-8">
         Customer Reviews
       </h2>

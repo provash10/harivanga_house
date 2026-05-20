@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer/Footer";
+import FloatingChat from "@/components/FloatingChat/FloatingChat";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -24,12 +25,14 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col" suppressHydrationWarning>
         <Header></Header>
-        <main className="max-w-7xl mx-auto py-0">
+        {/* <main className="max-w-7xl mx-auto py-0">*/}
+        <main className="px-0 py-0">
           {children}
         </main>
         <Footer></Footer>
+        <FloatingChat />
         </body>
     </html>
   );

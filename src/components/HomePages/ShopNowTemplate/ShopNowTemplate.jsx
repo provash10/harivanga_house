@@ -2,34 +2,37 @@ import React from 'react';
 import shopTemplate from '../../../../public/img/shoptemplate.png';
 import shopNowImg from '../../../../public/img/ShopNowimg.png';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const ShopNowTemplate = () => {
     return (
-        <div className='m-2'>
+        <div className='px-5 md:px-10 py-2'>
             <div
-                className="flex justify-start items-center w-full h-[300px] bg-cover bg-center rounded-2xl px-10"
-                style={{
-                    backgroundImage: `url(${shopTemplate.src})`
-                }}
+                className="relative flex flex-col sm:flex-row justify-start items-center w-full min-h-[200px] sm:h-[300px] bg-cover bg-center rounded-2xl px-6 sm:px-10 overflow-hidden gap-4"
+                style={{ backgroundImage: `url(${shopTemplate.src})` }}
             >
-                <div className="rounded-3xl overflow-hidden">
+                {/* Mango Image — hidden on very small screens */}
+                <div className="hidden sm:block rounded-3xl overflow-hidden shrink-0">
                     <Image
                         src={shopNowImg}
-                        alt="chooseImg"
-                        width={500}
-                        height={450}
-                        className="object-cover -ml-12"
+                        alt="Shop Now"
+                        width={400}
+                        height={350}
+                        className="object-cover -ml-10"
                     />
                 </div>
 
-                <div className=''>
-                    <h1 className='text-4xl font-bold text-white -ml-8'>
-                        Order Now & Enjoy <br /> the Real Taste of Harivanga.
+                {/* Text + Button */}
+                <div className='text-center sm:text-left'>
+                    <h1 className='text-xl sm:text-3xl md:text-4xl font-bold text-white'>
+                        Order Now & Enjoy <br className="hidden sm:block" />
+                        the Real Taste of Harivanga.
                     </h1>
-                    <div className="flex justify-end">
-                        {/* <button className='text-2xl text-white bg-[#023a02] hover:bg-[#f75205] rounded-3xl font-bold px-4 py-3 mt-8'>Shop Now !!!</button> */}
-                        <button className='btn text-2xl text-white rounded-md font-bold px-4 py-1 mt-8'>Shop Now !!!</button>
-                    </div>
+                    <Link href="/mangoes">
+                        <button className='btn text-base sm:text-2xl text-white rounded-md font-bold px-4 py-1 mt-4 sm:mt-8'>
+                            Shop Now
+                        </button>
+                    </Link>
                 </div>
             </div>
         </div>

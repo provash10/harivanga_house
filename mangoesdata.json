@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Harivanga (A Grade)",
+    "short_description": "Naturally sweet & juicy",
+    "description": "Harivanga A Grade আম হলো সেরা মানের আম যা সরাসরি রাজশাহীর বাগান থেকে সংগ্রহ করা হয়। এটি সম্পূর্ণ প্রাকৃতিকভাবে পাকানো, কোনো কেমিক্যাল ব্যবহার করা হয় না। মিষ্টি স্বাদ ও সুগন্ধে ভরপুর এই আম আপনার পরিবারের জন্য আদর্শ।",
+    "price": 1200,
+    "pricePerKg": 120,
+    "weight": "10kg",
+    "baseWeight": 10,
+    "origin": "রাজশাহী, বাংলাদেশ",
+    "delivery": "৩-৫ কার্যদিবস",
+    "features": [
+      "১০০% প্রাকৃতিকভাবে পাকানো",
+      "কোনো কেমিক্যাল বা কার্বাইড নেই",
+      "সরাসরি বাগান থেকে সংগ্রহ",
+      "ফ্রেশ ও হাইজিনিক প্যাকেজিং"
+    ],
+    "image": "https://i.ibb.co.com/bg4Bgqmn/harivanga-agrade.png",
+    "gallery": [
+      "https://i.ibb.co.com/bg4Bgqmn/harivanga-agrade.png",
+      "https://i.ibb.co.com/jZ3nZh2X/harivanga-bgrade.png",
+      "https://i.ibb.co.com/4wDghQGW/harivanga-premium.png"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Harivanga (B Grade)",
+    "short_description": "Great taste, best value",
+    "description": "Harivanga B Grade আম স্বাদে অসাধারণ এবং দামে সাশ্রয়ী। যারা বাজেটের মধ্যে ভালো মানের আম খেতে চান তাদের জন্য এটি পারফেক্ট চয়েস। প্রতিটি আম যত্নসহকারে বাছাই করা হয়।",
+    "price": 900,
+    "pricePerKg": 90,
+    "weight": "10kg",
+    "baseWeight": 10,
+    "origin": "রাজশাহী, বাংলাদেশ",
+    "delivery": "৩-৫ কার্যদিবস",
+    "features": [
+      "সাশ্রয়ী মূল্যে সেরা স্বাদ",
+      "কোনো কেমিক্যাল বা কার্বাইড নেই",
+      "সরাসরি বাগান থেকে সংগ্রহ",
+      "ফ্রেশ ও হাইজিনিক প্যাকেজিং"
+    ],
+    "image": "https://i.ibb.co.com/jZ3nZh2X/harivanga-bgrade.png",
+    "gallery": [
+      "https://i.ibb.co.com/jZ3nZh2X/harivanga-bgrade.png",
+      "https://i.ibb.co.com/bg4Bgqmn/harivanga-agrade.png",
+      "https://i.ibb.co.com/hR4BrHWy/harivanga-minibox.png"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Harivanga (Premium)",
+    "short_description": "Extra large & extra sweet",
+    "description": "Harivanga Premium হলো আমাদের সবচেয়ে উন্নত মানের আম। আকারে বড়, স্বাদে অতুলনীয় এবং সুগন্ধে অপ্রতিদ্বন্দ্বী। বিশেষ উপলক্ষ বা গিফট করার জন্য এটি সেরা পছন্দ।",
+    "price": 1500,
+    "pricePerKg": 150,
+    "weight": "10kg",
+    "baseWeight": 10,
+    "origin": "রাজশাহী, বাংলাদেশ",
+    "delivery": "৩-৫ কার্যদিবস",
+    "features": [
+      "এক্সট্রা লার্জ সাইজ",
+      "সর্বোচ্চ মিষ্টতা ও সুগন্ধ",
+      "গিফট প্যাকেজিং উপলব্ধ",
+      "১০০% অর্গানিক ও ন্যাচারাল"
+    ],
+    "image": "https://i.ibb.co.com/4wDghQGW/harivanga-premium.png",
+    "gallery": [
+      "https://i.ibb.co.com/4wDghQGW/harivanga-premium.png",
+      "https://i.ibb.co.com/bg4Bgqmn/harivanga-agrade.png",
+      "https://i.ibb.co.com/jZ3nZh2X/harivanga-bgrade.png"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Harivanga (Mini Box)",
+    "short_description": "Perfect for small family",
+    "description": "Harivanga Mini Box ছোট পরিবারের জন্য আদর্শ। ৫ কেজির এই প্যাকেজটি তাজা ও সুস্বাদু আমে ভরপুর। কম পরিমাণে কিনতে চাইলে এটি আপনার জন্য সেরা অপশন।",
+    "price": 650,
+    "pricePerKg": 130,
+    "weight": "5kg",
+    "baseWeight": 5,
+    "origin": "রাজশাহী, বাংলাদেশ",
+    "delivery": "৩-৫ কার্যদিবস",
+    "features": [
+      "ছোট পরিবারের জন্য পারফেক্ট",
+      "কোনো কেমিক্যাল বা কার্বাইড নেই",
+      "সরাসরি বাগান থেকে সংগ্রহ",
+      "ফ্রেশ ও হাইজিনিক প্যাকেজিং"
+    ],
+    "image": "https://i.ibb.co.com/hR4BrHWy/harivanga-minibox.png",
+    "gallery": [
+      "https://i.ibb.co.com/hR4BrHWy/harivanga-minibox.png",
+      "https://i.ibb.co.com/4wDghQGW/harivanga-premium.png",
+      "https://i.ibb.co.com/bg4Bgqmn/harivanga-agrade.png"
+    ]
+  }
+]
