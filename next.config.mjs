@@ -15,6 +15,16 @@ const nextConfig = {
       },
     ],
   },
+
+  // async redirects() {
+  //   return [
+  //     {
+  //       source: '/mango-details/:id',
+  //       destination: '/mangoes/:id',
+  //       permanent: true,
+  //     },
+  //   ]
+  // },
 };
 
 export default nextConfig;

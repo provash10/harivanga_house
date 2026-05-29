@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { IoLogoApple, IoSearchSharp, IoMenuSharp, IoCloseSharp } from 'react-icons/io5';
@@ -14,7 +15,13 @@ const Header = () => {
 
                 {/* Logo */}
                 <Link href="/" className='flex flex-row items-center gap-1 hover:opacity-90 transition'>
-                    <IoLogoApple size={45} />
+                    {/* <IoLogoApple size={45} /> */}
+                   <Image
+  src="/img/harivanga_house-logo.png"
+  alt="Harivanga House Logo"
+  width={100}
+  height={100}
+/>
                     <div>
                         <h1 className='text-lg md:text-2xl font-bold leading-tight'>Harivanga House</h1>
                         <p className='text-xs md:text-sm font-semibold'>Online Mango Business</p>
@@ -25,8 +32,10 @@ const Header = () => {
                 <nav className='hidden md:flex items-center space-x-5'>
                     <Link href="/" className='btn font-bold'>Home</Link>
                     <Link href="/mangoes" className='btn font-bold'>Mangoes</Link>
-                    <Link href="/about" className='btn font-bold'>About Us</Link>
-                    <Link href="/contact" className='btn font-bold'>Contact Us</Link>
+                    {/* <Link href="/about" className='btn font-bold'>About</Link> */}
+                    <Link href="/contact" className='btn font-bold'>Contact</Link>
+                    <Link href="/reviews" className='btn font-bold'>Reviews</Link>
+                    <Link href="/mangoes/add" className='btn font-bold'>Add</Link>
                 </nav>
 
                 {/* Desktop Search + Cart */}
@@ -69,8 +78,9 @@ const Header = () => {
                     </div>
                     <Link href="/" onClick={() => setMenuOpen(false)} className='btn font-bold'>Home</Link>
                     <Link href="/mangoes" onClick={() => setMenuOpen(false)} className='btn font-bold'>Mangoes</Link>
-                    <Link href="/about" onClick={() => setMenuOpen(false)} className='btn font-bold'>About Us</Link>
-                    <Link href="/contact" onClick={() => setMenuOpen(false)} className='btn font-bold'>Contact Us</Link>
+                    <Link href="/about" onClick={() => setMenuOpen(false)} className='btn font-bold'>About</Link>
+                    <Link href="/contact" onClick={() => setMenuOpen(false)} className='btn font-bold'>Contact</Link>
+                     <Link href="/reviews" onClick={() => setMenuOpen(false)} className='btn font-bold'>Reviews</Link>
                 </div>
             )}
         </header>

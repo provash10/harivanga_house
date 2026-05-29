@@ -1,22 +1,37 @@
 import React from 'react';
 import MangoCard from '@/components/Cards/MangoCard';
-import mangoesData from '../../../mangoesdata.json';
 
-const MangoesPage = () => {
+export const getAllMangoes = async (searchParamsPromise) => {
+    const searchParams = await searchParamsPromise;
+    const getParams = new URLSearchParams(searchParams).toString();
+    console.log(getParams)
+
+    const res = await fetch("http://localhost:3000/api/mangoes", {
+        cache: 'no-store'
+    });
+
+    const data = await res.json();
+    return data;
+}
+
+const Mangoes = async ({ searchParams }) => {
+    const data = await getAllMangoes(searchParams);
+    const mangoesList = data?.mangoes || [];
+
     return (
-        <div className='max-w-7xl mx-auto'>
-            <h1 className='text-2xl sm:text-3xl text-center font-bold mb-2'>
-                Choose Your Best Package
-            </h1>
-            <p className='text-center text-gray-500 text-sm mb-6'>Fresh from the farm, delivered to your door</p>
-
-            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-4 sm:p-6'>
-                {mangoesData.map((mango) => (
-                    <MangoCard key={mango.id} mango={mango} />
-                ))}
+        <div className="container mx-auto p-4">
+            <h1 className="text-3xl font-bold mb-6">All Mango</h1>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                {mangoesList && mangoesList.length > 0 ? (
+                    mangoesList.map((mango) => (
+                        <MangoCard key={mango._id || mango.id} mango={mango} />
+                    ))
+                ) : (
+                    <p>No mangoes found.</p>
+                )}
             </div>
         </div>
     );
 };
 
-export default MangoesPage;
+export default Mangoes;

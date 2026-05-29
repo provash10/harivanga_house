@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+  title: "About Us",
+  description: "Harivanga House - Best Online Mango Shop",
+};
+
 const About = () => {
     return (
         <div>
