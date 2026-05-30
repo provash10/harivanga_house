@@ -95,3 +95,79 @@ Details Page Main Image
 
 harivanga_houseDB
 b3yPtjYjOkdTNnl6
+
+================================
+Development ID 
+AKfycbznA9CxAF8rVfztMppsNEzaZmf5AQp60stg8j9ayEi4U9PF3W0kcg4Q1OhWM_4Qvmjx  old
+AKfycbyfQ8ZWZ7ggIaZncMYf4dph1vYvwOOCbT6KNA2pb6cB-R3wHPaUPscd1ii9UqdxMV3S
+
+Web app
+https://script.google.com/macros/s/AKfycbznA9CxAF8rVfztMppsNEzaZmf5AQp60stg8j9ayEi4U9PF3W0kcg4Q1OhWM_4Qvmjx/exec old
+https://script.google.com/macros/s/AKfycbyfQ8ZWZ7ggIaZncMYf4dph1vYvwOOCbT6KNA2pb6cB-R3wHPaUPscd1ii9UqdxMV3S/exec
+
+
+
+
+===============
+Google Sheets Webhook Setup Guide
+I have built the Order Form! Now we need to connect it to your Google Sheet so that orders are automatically saved when a customer submits the form.
+
+Follow these simple steps:
+
+1. Create a Google Sheet
+Go to Google Sheets and create a Blank spreadsheet.
+Name it something like "Mango Orders".
+In the first row, add the following headers in columns A through J: Date, Product Name, Product ID, Quantity, Total Price, Customer Name, Phone, Address, Payment Method, Transaction ID
+2. Add the Apps Script
+In your Google Sheet, click on Extensions > Apps Script in the top menu.
+Delete any existing code and paste the following code:
+javascript
+
+function doPost(e) {
+  try {
+    var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+    var data = JSON.parse(e.postData.contents);
+    
+    // Append the data as a new row
+    sheet.appendRow([
+      data.date,
+      data.productName,
+      data.productId,
+      data.quantity,
+      data.totalPrice,
+      data.name,
+      data.phone,
+      data.address,
+      data.paymentMethod,
+      data.transactionId
+    ]);
+    
+    return ContentService.createTextOutput(JSON.stringify({ "status": "success" }))
+      .setMimeType(ContentService.MimeType.JSON);
+      
+  } catch (error) {
+    return ContentService.createTextOutput(JSON.stringify({ "status": "error", "message": error.toString() }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+}
+3. Deploy the Web App
+Click the blue Deploy button in the top right corner and select New deployment.
+Click the gear icon ⚙️ next to "Select type" and choose Web app.
+Fill out the details:
+Description: Mango Orders Webhook
+Execute as: Me (your email)
+Who has access: Anyone (This is critical so your website can send data to it)
+Click Deploy. (You may need to authorize access on your Google account).
+Copy the Web app URL that is generated.
+4. Connect Your Website
+Open your .env file in your code editor.
+Add the following line at the bottom, pasting the URL you copied:
+env
+
+NEXT_PUBLIC_GOOGLE_SHEET_WEBHOOK_URL="PASTE_YOUR_WEB_APP_URL_HERE"
+WARNING
+
+Update Payment Numbers I have set placeholder numbers for bKash, Nagad, and Rocket (01XXXXXXXXX). You need to update these numbers in: 
+OrderModal.jsx:21
+
+

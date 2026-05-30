@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import OrderModal from "../Forms/OrderForm/OrderModal";
 
 const MangoCardDetails = ({ mango }) => {
     const {
@@ -26,6 +27,7 @@ const MangoCardDetails = ({ mango }) => {
     // States
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const [orderQuantity, setOrderQuantity] = useState(baseQuantity || 1);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Calculate Dynamic Price
     const currentPrice = basePrice || 0;
@@ -147,8 +149,11 @@ const MangoCardDetails = ({ mango }) => {
 
                     {/* Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 mt-auto">
-                        <button className="flex-1 bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2">
-                            <span>Add to Cart</span>
+                        <button 
+                            onClick={() => setIsModalOpen(true)}
+                            className="flex-1 bg-orange-500 hover:bg-orange-600 text-white py-4 rounded-2xl font-bold text-lg transition-all duration-300 shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+                        >
+                            <span>Buy Now</span>
                             <span className="bg-white text-orange-500 px-2 py-0.5 rounded-lg text-sm ml-2">৳ {totalPrice}</span>
                         </button>
 
@@ -161,6 +166,15 @@ const MangoCardDetails = ({ mango }) => {
                     </div>
                 </div>
             </div>
+
+            {/* Order Modal */}
+            <OrderModal 
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                mango={mango}
+                orderQuantity={orderQuantity}
+                totalPrice={totalPrice}
+            />
         </div>
     );
 };
